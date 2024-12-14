@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/login"></ion-back-button>
+      </ion-buttons>
+      <div class="text-center flex-grow-1">
+        <img src="assets/images/Logo_DuocUC.svg.png" alt="" class="Logo-DuocUC mt-2">
+        <ion-title class="text-center fs-2 mb-2">{{ 'app.title' | translate }}</ion-title>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h3 class="text-center mt-2">{{ 'route.header' | translate }}</h3>
+  <div id="mapId" style="height: 100%;"></div>
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar color="dark" class="text-center">
+    <div class="text-center mt-2">
+      <ion-button class="fs-6 mb-1 me-3" (click)="goToDUOC()">{{ 'route.duoc' | translate }}</ion-button>
+      <ion-button class="fs-6 mb-1 me-3" (click)="goToMyPosition()">{{ 'route.here' | translate }}</ion-button>
+      <ion-button class="fs-6 mb-1" (click)="showRouteToDuoc()">{{ 'route.route' | translate }}</ion-button>
+    </div>
+

@@ -1,0 +1,28 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom" *ngIf="!scanning">
+    <ion-tab-button tab="home" (click)="goHome()" *ngIf="!isAdmin">
+      <ion-icon name="home"></ion-icon>
+      {{ 'tabs.home' | translate }}
+    </ion-tab-button>
+    <ion-tab-button tab="my-class" (click)="goMyClass()" *ngIf="!isAdmin">
+      <ion-icon name="book-outline"></ion-icon>
+      {{ 'tabs.myClass' | translate }}
+    </ion-tab-button>
+    <ion-tab-button tab="forum" (click)="goForum()">
+      <ion-icon name="chatbubbles-outline"></ion-icon>
+      {{ 'tabs.forum' | translate }}
+    </ion-tab-button>
+    <ion-tab-button tab="my-profile" (click)="goMyProfile()">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      {{ 'tabs.myProfile' | translate }}
+    </ion-tab-button>
+    <ion-tab-button tab="users" (click)="goUsers()" *ngIf="isAdmin">
+      <ion-icon name="person-remove-outline"></ion-icon>
+      Usuarios
+    </ion-tab-button>
+    <ion-tab-button (click)="logout()" id="logoutTabButton">
+      <ion-icon name="exit-outline"></ion-icon>
+      {{ 'tabs.logout' | translate }}
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
